@@ -76,11 +76,11 @@ def printReports(report):
     Prints a formatted table with the list of tuples (Name, Shares, Price, Change)
     '''
     headers = ('Name', 'Shares', 'Price', 'Change')
-    print('%10%10%10%10' % headers)
+    print('%10s %10s %10s %10s' % headers)
     print(('-' * 10 + ' ') * len(headers))
 
     for row in report:
-        print('%10 %10d %10.2f %10.2f' % row)
+        print('%10s %10d %10.2f %10.2f' % row)
 
 def portfolioReport(portfolioFile, priceFile):
     '''
@@ -95,4 +95,5 @@ def portfolioReport(portfolioFile, priceFile):
 
     printReports(report)
 
-portfolioReport('/../Work/Data/portfolio.csv', '/../Work/Data/prices')
+portfolioReport('../Work/Data/portfolio.csv',
+                 '../Work/Data/prices.csv')
